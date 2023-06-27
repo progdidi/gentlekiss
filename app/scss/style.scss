@@ -4,43 +4,81 @@
 @import 'libs';
 
 .header {    
-    background-color: #F7859C;
-    box-shadow: 0px 3px 12px #F7859C;
+    background-color: $background-color;
+    box-shadow: 0px 3px 12px $pink-color;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
     &__top {
         padding: 40px 0px;
         margin-bottom: 50px;
+        background-color: $pink-color;
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu {
+            &__list {
+                display: flex;
+                gap: 30px;
+                &-item {
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid transparent;
+                    transition: all 0.5s;
+                    &:hover {
+                        border-bottom: 2px solid $btn-color;
+                    }
+                }
+            }
+            
+        }
         
     }
     .logo {
         font-weight: 700;
         font-size: 36px;
         line-height: 32px;
+        display: block;
     }
     .promo {
-        display: flex;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            align-items: center;
+        }
         &__content {
-            padding-top: 100px;
-            width: 500px;
+            padding-top: 120px;
+            max-width: 500px;
+            margin-right: 70px;
+            &-title {
+                font-size: 50px;
+                line-height: 57px;
+                margin-bottom: 25px;
+            }
+            &-text {
+                margin-bottom: 30px;
+                
+            }
+            &-btn {
+                padding: 20px 40px;
+                border-radius: 25px;
+                background-color: $pink-color;
+                font-weight: 700;
+                &:hover {
+                    background-color: $btn-color;
+                    color: #fff;
+                }
+            }
         }
-        &__title {
-            font-size: 50px;
-            line-height: 57px;
-            margin-bottom: 25px;
-        }
-        &__text {
-            margin-bottom: 30px;
-            
-        }
-        &__btn {
-            padding: 20px 40px;
-            border-radius: 25px;
-            background-color: #F7859C;
-            font-weight: 700;
-        }
-        &__img {
-        }
+        
+        &__media {
+            &-img {
+                object-fit: cover;
+                max-width: 90%;
+            }
     }
 
+}
 }
 
 .about {    
@@ -100,7 +138,6 @@
 }
 
 
-
 .music {
     text-align: center;
     &__title {
@@ -112,7 +149,6 @@
         
     }
 }
-
 
 
 .footer {
@@ -131,6 +167,8 @@
     &__contacts-img {
     }
 }
+
+@import 'media';
 
 
 
